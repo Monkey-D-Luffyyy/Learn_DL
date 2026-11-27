@@ -1,0 +1,13 @@
+# Install PyTorch separately so the CUDA wheel matches the GPU server.
+matplotlib>=3.7
+numpy>=1.24
+Pillow>=9.5
+tqdm>=4.65
+
+# LoRA / DPO reproduction
+accelerate>=0.30
+datasets>=2.18
+peft>=0.10
+safetensors>=0.4
+transformers>=4.40
+trl>=0.12

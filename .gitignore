@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.venv/
+venv/
+env/
+
+# Local editor and environment files
+.vscode/
+.env
+.env.*
+!.env.example
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Extracted MNIST images; use mnist_images.zip instead
+mnist_images/
+
+# Experiment outputs
+out_lora_r*/
+out_dpo_beta*/
+lora_rank_ablation.json
+dpo_beta*.json
+
+# OS files
+.DS_Store
+Thumbs.db
