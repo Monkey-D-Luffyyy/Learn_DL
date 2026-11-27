@@ -4,25 +4,19 @@
 
 ## 在 GPU 服务器上拉取
 
-仓库是私有的。第一次在服务器上拉取前，先生成只读访问密钥：
-
-```bash
-ssh-keygen -t ed25519 -C "Learn_DL-server" -f ~/.ssh/learn_dl_deploy -N ""
-cat ~/.ssh/learn_dl_deploy.pub
-```
-
-把输出的公钥添加到 GitHub 仓库的
-`Settings -> Deploy keys -> Add deploy key`，保持 “Allow write access”
-不勾选。然后拉取仓库：
+仓库是公开的，可以直接从 GPU 服务器拉取：
 
 ```bash
 git clone git@github.com:Monkey-D-Luffyyy/Learn_DL.git
 cd Learn_DL
 ```
 
-如果服务器无法访问 GitHub 的 22 端口，也可以在
-`Settings -> Deploy keys` 页面查看 GitHub 推荐的 SSH over HTTPS 配置，
-或者使用 GitHub PAT 通过 HTTPS 拉取。
+如果服务器无法访问 GitHub 的 22 端口，也可以改用 HTTPS：
+
+```bash
+git clone https://github.com/Monkey-D-Luffyyy/Learn_DL.git
+cd Learn_DL
+```
 
 仓库只保存压缩后的 MNIST 数据。首次拉取后解压：
 
